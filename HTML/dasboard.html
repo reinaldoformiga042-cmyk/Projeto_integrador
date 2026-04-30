@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENAI - Dashboard</title>
+  <style>
+    /* RESET */
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+    body { background:#f4f4f4; }
+
+    /* ===== DASHBOARD ===== */
+    #dashboard { display:flex; height:100vh; }
+    .sidebar { width:70px; background:#0d3b82; color:white; display:flex; flex-direction:column; align-items:center; padding-top:20px; }
+    .sidebar img { width:35px; margin:20px 0; cursor:pointer; }
+    .main { flex:1; padding:20px; overflow-y:auto; }
+
+    /* TELAS INTERNAS */
+    .tela { display:none; }
+    .tela.active { display:block; }
+
+    /* FORMULARIOS */
+    .card form { display:flex; flex-direction:column; gap:10px; }
+    .card input, .card select, .card textarea { padding:8px; border-radius:5px; border:1px solid #ccc; width:100%; }
+    .card button { padding:10px; border:none; border-radius:8px; background:#0d3b82; color:white; cursor:pointer; }
+  </style>
+</head>
+<body>
+
+<!-- DASHBOARD -->
+<div id="dashboard">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" title="Painel" onclick="mostrarTela('painel')">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/box.png" title="Ocorrências" onclick="mostrarTela('ocorrencias')">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/toolbox.png" title="Manutenção" onclick="mostrarTela('manutencao')">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/user.png" title="Usuários" onclick="mostrarTela('usuarios')">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/test-tube.png" title="Laboratórios" onclick="mostrarTela('laboratorios')">
+  </div>
+
+  <div class="main">
+    <!-- PAINEL -->
+    <div id="painel" class="tela active">
+      <h2>Painel de Laboratórios</h2>
+    </div>
+
+    <!-- OCORRÊNCIAS -->
+    <div id="ocorrencias" class="tela">
+      <h2>Ocorrências</h2>
+    </div>
+
+    <!-- MANUTENÇÃO -->
+    <div id="manutencao" class="tela">
+      <h2>Manutenção / Equipamentos</h2>
+    </div>
+
+    <!-- USUÁRIOS -->
+    <div id="usuarios" class="tela">
+      <h2>Cadastro de Usuário</h2>
+    </div>
+
+    <!-- LABORATÓRIOS -->
+    <div id="laboratorios" class="tela">
+      <h2>Cadastro de Laboratório</h2>
+    </div>
+  </div>
+</div>
+
+<script>
+  function mostrarTela(nome){
+    const telas = document.querySelectorAll('.tela');
+    telas.forEach(t => t.classList.remove('active'));
+    document.getElementById(nome).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
