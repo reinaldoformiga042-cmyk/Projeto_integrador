@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Laboratório</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+
+    .sidebar {
+      width: 80px;
+      height: 100vh;
+      background-color: #0d3b82;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      position: fixed;
+    }
+
+    .sidebar img {
+      width: 40px;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+
+    .header {
+      margin-left: 80px;
+      height: 70px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header h2 {
+      color: #0d3b82;
+    }
+
+
+    .container {
+      margin-left: 80px;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      width: 500px;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    label, input, select {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      background: #0d3b82;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="index.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Início"/></a>
+    <a href="ocorrencias.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/briefcase.png" alt="Ocorrências"/></a>
+    <a href="cadastro.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/test-tube.png" alt="Cadastrar Laboratório"/></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/group.png" alt="Usuários"/></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/settings.png" alt="Configurações"/></a>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <h2>Cadastrar Laboratório</h2>
+    <input type="text" placeholder="Pesquisar">
+    <div>⚙️ 🔔 👤</div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="card">
+      <h3>Cadastro de Laboratório</h3>
+      <label>Nome do Laboratório</label>
+      <input type="text" placeholder="Nome do laboratório">
+
+      <label>Tipo de Laboratório</label>
+      <select>
+        <option>Robótica</option>
+        <option>Informática</option>
+        <option>Mecânica</option>
+      </select>
+
+      <label>Capacidade</label>
+      <select>
+        <option>20 alunos</option>
+        <option>30 alunos</option>
+        <option>40 alunos</option>
+      </select>
+
+      <label>Status</label>
+      <select>
+        <option>Em uso</option>
+        <option>Em manutenção</option>
+        <option>Indisponível</option>
+      </select>
+
+      <button class="btn">Confirmar Cadastro</button>
+    </div>
+  </div>
+
+</body>
+</html>
