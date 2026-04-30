@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SENAI - Login</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+body { height:100vh; display:flex; }
+
+.login-left {
+    flex:2;
+    background: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789') center/cover no-repeat;
+    filter: brightness(0.7);
+}
+
+.login-right {
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eee;
+}
+
+.login-box {
+    background:#8fb3c7;
+    padding:40px;
+    border-radius:20px;
+    width:300px;
+    text-align:center;
+    color:white;
+}
+
+.login-box h2 { margin-bottom:20px; }
+.login-box input { width:100%; padding:10px; margin:10px 0; border-radius:10px; border:none; }
+.login-box button { width:100%; padding:10px; border:none; border-radius:20px; background:#0d3b8e; color:white; cursor:pointer; }
+.login-box a { display:block; margin-top:10px; font-size:12px; color:white; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<div class="login-left"></div>
+<div class="login-right">
+    <div class="login-box">
+        <h2>SENAI LOGIN</h2>
+        <input type="text" id="usuario" placeholder="Usuário">
+        <input type="password" id="senha" placeholder="Senha">
+        <button onclick="entrar()">Entrar</button>
+        <a href="#">Esqueceu a senha?</a>
+    </div>
+</div>
+
+<script>
+function entrar(){
+    const user = document.getElementById('usuario').value;
+    const pass = document.getElementById('senha').value;
+    if(user === "admin" && pass === "1234"){
+        window.location.href = "painel.html"; // Redireciona para a próxima tela
+    } else {
+        alert("Usuário ou senha incorretos!");
+    }
+}
+</script>
+
+</body>
+</html>
