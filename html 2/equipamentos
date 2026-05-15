@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI - Equipamentos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <div class="bg-[#2b4c9f] text-white w-64 flex flex-col">
+            <div class="p-4">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-xl">👤</div>
+                    <div>
+                        <div class="font-bold text-sm">Sistema</div>
+                        <div class="text-xs opacity-80">Laboratórios</div>
+                    </div>
+                </div>
+            </div>
+            <nav class="flex-1 px-3 space-y-1">
+                <a href="index.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>🏠</span><span class="text-sm">Início</span></a>
+                <a href="laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>🧪</span><span class="text-sm">Laboratórios</span></a>
+                <a href="equipamentos.html" class="flex items-center gap-3 px-3 py-3 rounded-lg bg-blue-700"><span>💻</span><span class="text-sm">Equipamentos</span></a>
+                <a href="cadastrar-usuario.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>👥</span><span class="text-sm">Usuários</span></a>
+                <a href="uso-laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>📅</span><span class="text-sm">Uso</span></a>
+            </nav>
+        </div>
+
+        <div class="flex-1 flex flex-col">
+            <header class="bg-white border-b px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="text-3xl font-bold text-[#2b4c9f]">SENAI</div>
+                    <div class="flex-1 max-w-2xl mx-8">
+                        <input type="text" placeholder="🔍 Pesquisar" class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button>⚙️</button><button>🔔</button>
+                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white">👤</div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-auto p-6">
+                <h1 class="text-2xl text-[#2b4c9f] mb-6">Equipamentos</h1>
+
+                <div class="bg-white rounded-lg shadow-sm border p-6">
+                    <div class="flex gap-4 mb-6">
+                        <button class="px-4 py-2 border rounded-lg">Status ▼</button>
+                        <input type="text" placeholder="🔍 Pesquisar equipamentos" class="flex-1 max-w-md px-4 py-2 border rounded-lg">
+                        <button class="px-4 py-2 border rounded-lg">🔧 Filtrar</button>
+                        <a href="conserto-equipamento.html" class="bg-[#2b4c9f] text-white px-4 py-2 rounded-lg">Consertar equipamentos</a>
+                    </div>
+
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Laboratório</th>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Curso</th>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Status</th>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Última manutenção</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-100 rounded flex items-center justify-center text-xl">🔌</div>
+                                    <span class="text-sm">Arduino Uno</span>
+                                </td>
+                                <td class="px-4 py-4 text-sm">Eletrônica</td>
+                                <td class="px-4 py-4"><span class="px-3 py-1 rounded-full text-xs text-white bg-red-500">Em Uso</span></td>
+                                <td class="px-4 py-4 text-sm text-gray-600">10 minutos atrás</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-100 rounded flex items-center justify-center text-xl">🖨️</div>
+                                    <span class="text-sm">Impressora 3D</span>
+                                </td>
+                                <td class="px-4 py-4 text-sm">Robótica</td>
+                                <td class="px-4 py-4"><span class="px-3 py-1 rounded-full text-xs text-white bg-yellow-500">Manutenção</span></td>
+                                <td class="px-4 py-4 text-sm text-gray-600">6 horas atrás</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-100 rounded flex items-center justify-center text-xl">📊</div>
+                                    <span class="text-sm">Osciloscópio Digital</span>
+                                </td>
+                                <td class="px-4 py-4 text-sm">Informática</td>
+                                <td class="px-4 py-4"><span class="px-3 py-1 rounded-full text-xs text-white bg-yellow-500">Manutenção</span></td>
+                                <td class="px-4 py-4 text-sm text-gray-600">40 minutos atrás</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-100 rounded flex items-center justify-center text-xl">💻</div>
+                                    <span class="text-sm">PC Dell</span>
+                                </td>
+                                <td class="px-4 py-4 text-sm">Informática</td>
+                                <td class="px-4 py-4"><span class="px-3 py-1 rounded-full text-xs text-white bg-red-500">Em Uso</span></td>
+                                <td class="px-4 py-4 text-sm text-gray-600">8 horas atrás</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-100 rounded flex items-center justify-center text-xl">⚙️</div>
+                                    <span class="text-sm">Motor servo</span>
+                                </td>
+                                <td class="px-4 py-4 text-sm">Mecânica</td>
+                                <td class="px-4 py-4"><span class="px-3 py-1 rounded-full text-xs text-white bg-red-500">Em Uso</span></td>
+                                <td class="px-4 py-4 text-sm text-gray-600">10 minutos atrás</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-4 flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-100 rounded flex items-center justify-center text-xl">🔧</div>
+                                    <span class="text-sm">Máquina CNC</span>
+                                </td>
+                                <td class="px-4 py-4 text-sm">Hidráulica</td>
+                                <td class="px-4 py-4"><span class="px-3 py-1 rounded-full text-xs text-white bg-red-500">Em Uso</span></td>
+                                <td class="px-4 py-4 text-sm text-gray-600">2 horas atrás</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
