@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI - Uso dos Laboratórios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <div class="bg-[#2b4c9f] text-white w-64 flex flex-col">
+            <div class="p-4">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-xl">👤</div>
+                    <div><div class="font-bold text-sm">Sistema</div><div class="text-xs opacity-80">Laboratórios</div></div>
+                </div>
+            </div>
+            <nav class="flex-1 px-3 space-y-1">
+                <a href="index.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>🏠</span><span class="text-sm">Início</span></a>
+                <a href="laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>🧪</span><span class="text-sm">Laboratórios</span></a>
+                <a href="equipamentos.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>💻</span><span class="text-sm">Equipamentos</span></a>
+                <a href="cadastrar-usuario.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>👥</span><span class="text-sm">Usuários</span></a>
+                <a href="uso-laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg bg-blue-700"><span>📅</span><span class="text-sm">Uso</span></a>
+            </nav>
+        </div>
+
+        <div class="flex-1 flex flex-col">
+            <header class="bg-white border-b px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="text-3xl font-bold text-[#2b4c9f]">SENAI</div>
+                    <div class="flex-1 max-w-2xl mx-8">
+                        <input type="text" placeholder="🔍 Pesquisar" class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button>⚙️</button><button>🔔</button>
+                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white">👤</div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-auto p-6">
+                <div class="flex justify-between mb-6">
+                    <h1 class="text-2xl text-[#2b4c9f]">Uso dos laboratórios</h1>
+                    <a href="reservar-laboratorio.html" class="bg-[#2b4c9f] text-white px-4 py-2 rounded-lg">Reservar laboratório</a>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="col-span-2 bg-white rounded-lg shadow-sm border p-6">
+                        <div class="mb-4">
+                            <button class="px-4 py-2 border rounded-lg">Semana Atual ▼</button>
+                        </div>
+                        
+                        <table class="w-full border-collapse text-sm">
+                            <thead>
+                                <tr>
+                                    <th class="p-2"></th>
+                                    <th class="p-2 text-center border-l"><div>Seg</div><div class="text-xs text-gray-500">23</div></th>
+                                    <th class="p-2 text-center border-l"><div>Ter</div><div class="text-xs text-gray-500">24</div></th>
+                                    <th class="p-2 text-center border-l"><div>Qua</div><div class="text-xs text-gray-500">24</div></th>
+                                    <th class="p-2 text-center border-l"><div>Qui</div><div class="text-xs text-gray-500">25</div></th>
+                                    <th class="p-2 text-center border-l"><div>Sex</div><div class="text-xs text-gray-500">26</div></th>
+                                    <th class="p-2 text-center border-l"><div>Sáb</div><div class="text-xs text-gray-500">27</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t"><td class="p-2 font-medium text-gray-600">08:00</td><td class="border-l"></td><td class="border-l relative"><div class="absolute inset-1 bg-blue-500 rounded text-xs text-white flex items-center justify-center">Eletrônica</div></td><td class="border-l"></td><td class="border-l"></td><td class="border-l relative"><div class="absolute inset-1 bg-blue-500 rounded text-xs text-white flex items-center justify-center">Bloqueado</div></td><td class="border-l"></td></tr>
+                                <tr class="border-t"><td class="p-2 font-medium text-gray-600">09:00</td><td class="border-l"></td><td class="border-l"></td><td class="border-l relative"><div class="absolute inset-1 bg-red-500 rounded text-xs text-white flex items-center justify-center">Informática</div></td><td class="border-l"></td><td class="border-l relative"><div class="absolute inset-1 bg-red-500 rounded text-xs text-white flex items-center justify-center">Informática</div></td><td class="border-l"></td></tr>
+                                <tr class="border-t"><td class="p-2 font-medium text-gray-600">10:00</td><td class="border-l"></td><td class="border-l"></td><td class="border-l relative"><div class="absolute inset-1 bg-red-500 rounded text-xs text-white flex items-center justify-center">Informática</div></td><td class="border-l"></td><td class="border-l relative"><div class="absolute inset-1 bg-red-500 rounded text-xs text-white flex items-center justify-center">Informática</div></td><td class="border-l"></td></tr>
+                                <tr class="border-t"><td class="p-2 font-medium text-gray-600">11:00</td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l relative"><div class="absolute inset-1 bg-yellow-500 rounded text-xs text-white flex items-center justify-center">Manutenção</div></td><td class="border-l relative"><div class="absolute inset-1 bg-yellow-500 rounded text-xs text-white flex items-center justify-center">Manutenção</div></td><td class="border-l"></td></tr>
+                                <tr class="border-t"><td class="p-2 font-medium text-gray-600">12:00</td><td class="border-l relative"><div class="absolute inset-1 bg-gray-300 rounded text-xs flex items-center justify-center text-gray-600">Intervalo</div></td><td class="border-l relative"><div class="absolute inset-1 bg-gray-300 rounded text-xs flex items-center justify-center text-gray-600">Intervalo</div></td><td class="border-l relative"><div class="absolute inset-1 bg-gray-300 rounded text-xs flex items-center justify-center text-gray-600">Intervalo</div></td><td class="border-l relative"><div class="absolute inset-1 bg-gray-300 rounded text-xs flex items-center justify-center text-gray-600">Intervalo</div></td><td class="border-l relative"><div class="absolute inset-1 bg-gray-300 rounded text-xs flex items-center justify-center text-gray-600">Intervalo</div></td><td class="border-l relative"><div class="absolute inset-1 bg-gray-300 rounded text-xs flex items-center justify-center text-gray-600">Intervalo</div></td></tr>
+                                <tr class="border-t"><td class="p-2 font-medium text-gray-600">13:00</td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td></tr>
+                                <tr class="border-t"><td class="p-2 font-medium text-gray-600">14:00</td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l relative"><div class="absolute inset-1 bg-blue-500 rounded text-xs text-white flex items-center justify-center">Eletrônica</div></td></tr>
+                                <tr class="border-t"><td class="p-2 font-medium text-gray-600">15:00</td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td></tr>
+                                <tr class="border-t"><td class="p-2 font-medium text-gray-600">16:00</td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l"></td><td class="border-l relative"><div class="absolute inset-1 bg-red-500 rounded text-xs text-white flex items-center justify-center">Robótica</div></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border p-6">
+                        <h2 class="font-semibold mb-4">Reservas Ativas</h2>
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-blue-500 bg-gray-50 p-3 rounded-r">
+                                <div class="text-xs text-gray-500">09:00 - 11:00</div>
+                                <div class="text-sm font-medium">Eletrônica</div>
+                            </div>
+                            <div class="border-l-4 border-yellow-500 bg-gray-50 p-3 rounded-r">
+                                <div class="text-xs text-gray-500">11:00 - 13:00</div>
+                                <div class="text-sm font-medium">Robótica</div>
+                                <div class="text-xs text-gray-600 mt-1">Aula Robótica</div>
+                            </div>
+                            <div class="border-l-4 border-red-500 bg-gray-50 p-3 rounded-r">
+                                <div class="text-xs text-gray-500">14:00 - 16:00</div>
+                                <div class="text-sm font-medium">Informática</div>
+                            </div>
+                            <div class="border-l-4 border-green-500 bg-gray-50 p-3 rounded-r">
+                                <div class="text-xs text-gray-500">16:00 - 18:00</div>
+                                <div class="text-sm font-medium">Mecânica</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t">
+                            <div class="text-sm font-medium mb-3">Legenda</div>
+                            <div class="space-y-2 text-xs">
+                                <div class="flex items-center gap-2"><div class="w-3 h-3 bg-red-500 rounded-full"></div><span>Reservado</span></div>
+                                <div class="flex items-center gap-2"><div class="w-3 h-3 bg-blue-500 rounded-full"></div><span>Em uso</span></div>
+                                <div class="flex items-center gap-2"><div class="w-3 h-3 bg-green-500 rounded-full"></div><span>Indisponível</span></div>
+                                <div class="flex items-center gap-2"><div class="w-3 h-3 bg-yellow-500 rounded-full"></div><span>Manutenção</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
