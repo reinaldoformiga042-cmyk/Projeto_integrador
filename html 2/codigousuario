@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI - Cadastrar Usuário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <div class="bg-[#2b4c9f] text-white w-64 flex flex-col">
+            <div class="p-4"><div class="flex items-center gap-2 mb-6"><div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-xl">👤</div><div><div class="font-bold text-sm">Sistema</div><div class="text-xs opacity-80">Laboratórios</div></div></div></div>
+            <nav class="flex-1 px-3 space-y-1">
+                <a href="index.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>🏠</span><span class="text-sm">Início</span></a>
+                <a href="laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>🧪</span><span class="text-sm">Laboratórios</span></a>
+                <a href="equipamentos.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>💻</span><span class="text-sm">Equipamentos</span></a>
+                <a href="cadastrar-usuario.html" class="flex items-center gap-3 px-3 py-3 rounded-lg bg-blue-700"><span>👥</span><span class="text-sm">Usuários</span></a>
+                <a href="uso-laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>📅</span><span class="text-sm">Uso</span></a>
+            </nav>
+        </div>
+
+        <div class="flex-1 flex flex-col">
+            <header class="bg-white border-b px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="text-3xl font-bold text-[#2b4c9f]">SENAI</div>
+                    <div class="flex-1 max-w-2xl mx-8"><input type="text" placeholder="🔍 Pesquisar" class="w-full px-4 py-2 border rounded-lg"></div>
+                    <div class="flex items-center gap-4"><button>⚙️</button><button>🔔</button><div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white">👤</div></div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-auto p-6">
+                <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-sm border p-8">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-10 h-10 bg-[#2b4c9f] rounded flex items-center justify-center text-white text-xl">👤</div>
+                        <h1 class="text-2xl text-[#2b4c9f]">Cadastrar Usuário</h1>
+                    </div>
+                    <div class="text-sm text-gray-500 mb-6">Usuários / Cadastrar Usuário</div>
+
+                    <form class="space-y-6">
+                        <div class="flex gap-8">
+                            <div class="flex flex-col items-center">
+                                <div class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-3 text-4xl text-gray-400">📷</div>
+                                <button type="button" class="px-4 py-1 bg-[#2b4c9f] text-white text-sm rounded">Enviar Foto</button>
+                                <div class="mt-4 text-sm text-gray-600">
+                                    <div class="font-medium">Nome Completo:</div>
+                                    <div class="font-medium mt-1">Tipo:</div>
+                                </div>
+                            </div>
+
+                            <div class="flex-1 space-y-4">
+                                <input type="text" placeholder="Nome Completo" class="w-full px-4 py-2 border rounded-lg">
+                                <input type="email" placeholder="Digite o e-mail" class="w-full px-4 py-2 border rounded-lg">
+                                <div class="flex gap-2">
+                                    <select class="w-24 px-3 py-2 border rounded-lg"><option>+55</option></select>
+                                    <input type="tel" placeholder="(oo)     ooooo-oooo" class="flex-1 px-4 py-2 border rounded-lg">
+                                </div>
+                                <input type="password" placeholder="Senha" class="w-full px-4 py-2 border rounded-lg">
+                                <input type="password" placeholder="Confirmar Senha" class="w-full px-4 py-2 border rounded-lg">
+                                <select class="w-full px-4 py-2 border rounded-lg">
+                                    <option>Instrutor</option>
+                                    <option>Manutenção</option>
+                                    <option>Administração</option>
+                                </select>
+
+                                <div class="flex gap-6 pt-2">
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="tipo" checked class="w-4 h-4">
+                                        <span class="text-sm">Instrutor</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="tipo" class="w-4 h-4">
+                                        <span class="text-sm">Manutenção</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="tipo" class="w-4 h-4">
+                                        <span class="text-sm">Administração</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end gap-3 pt-6">
+                            <a href="index.html" class="px-6 py-2 text-gray-700 bg-gray-200 rounded-lg">Cancelar</a>
+                            <button type="submit" class="px-6 py-2 bg-[#2b4c9f] text-white rounded-lg">Cadastrar →</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
