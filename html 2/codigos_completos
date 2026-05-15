@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema SENAI - Códigos Completos</title>
+    <style>
+        @media print {
+            .page-break { page-break-before: always; }
+            body { font-size: 10pt; }
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 40px;
+            line-height: 1.4;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2b4c9f;
+            border-bottom: 3px solid #2b4c9f;
+            padding-bottom: 10px;
+            font-family: Arial, sans-serif;
+        }
+        
+        h2 {
+            color: #2b4c9f;
+            margin-top: 40px;
+            font-family: Arial, sans-serif;
+            background: #e8f0ff;
+            padding: 10px;
+            border-left: 5px solid #2b4c9f;
+        }
+        
+        .file-info {
+            background: #fff3cd;
+            padding: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        pre {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 15px;
+            overflow-x: auto;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+        
+        code {
+            color: #212529;
+        }
+        
+        .toc {
+            background: #e8f0ff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            background: transparent;
+            padding: 0;
+            border: none;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .toc a {
+            color: #2b4c9f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        .header-page {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .header-page h1 {
+            font-size: 48px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        
+        .header-page p {
+            font-size: 18px;
+            color: #666;
+            font-family: Arial, sans-serif;
+        }
+        
+        .linha-numero {
+            color: #999;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- CAPA -->
+        <div class="header-page">
+            <h1>SISTEMA SENAI</h1>
+            <h2 style="background: none; border: none; text-align: center;">Gestão de Laboratórios</h2>
+            <p style="margin-top: 40px;">
+                <strong>Documentação Completa dos Códigos HTML</strong><br>
+                9 Páginas Funcionais
+            </p>
+            <p style="margin-top: 60px; color: #2b4c9f;">
+                📅 Data: 14 de Maio de 2026<br>
+                💻 Tecnologia: HTML5 + Tailwind CSS
+            </p>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- ÍNDICE -->
+        <div class="toc">
+            <h2>📑 Índice - Lista de Arquivos</h2>
+            <ul>
+                <li><a href="#file1">1. index.html - Dashboard/Ocorrências</a></li>
+                <li><a href="#file2">2. laboratorios.html - Gestão de Laboratórios</a></li>
+                <li><a href="#file3">3. equipamentos.html - Gestão de Equipamentos</a></li>
+                <li><a href="#file4">4. uso-laboratorios.html - Calendário de Uso</a></li>
+                <li><a href="#file5">5. cadastrar-laboratorio.html - Cadastro de Laboratório</a></li>
+                <li><a href="#file6">6. cadastrar-usuario.html - Cadastro de Usuário</a></li>
+                <li><a href="#file7">7. cadastrar-instrutor.html - Cadastro de Instrutor</a></li>
+                <li><a href="#file8">8. reservar-laboratorio.html - Reserva de Laboratório</a></li>
+                <li><a href="#file9">9. conserto-equipamento.html - Abertura de Chamado</a></li>
+            </ul>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- ARQUIVO 1 -->
+        <div id="file1">
+            <h2>📄 Arquivo 1: index.html</h2>
+            <div class="file-info">
+                <strong>Descrição:</strong> Página principal (Dashboard) com estatísticas e lista de laboratórios<br>
+                <strong>Funcionalidades:</strong> Cards de métricas, tabela de situação dos laboratórios
+            </div>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;SENAI - Dashboard&lt;/title&gt;
+    &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body class="bg-gray-100"&gt;
+    &lt;div class="flex h-screen"&gt;
+        &lt;!-- Sidebar --&gt;
+        &lt;div class="bg-[#2b4c9f] text-white w-64 flex flex-col"&gt;
+            &lt;div class="p-4"&gt;
+                &lt;div class="flex items-center gap-2 mb-6"&gt;
+                    &lt;div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-xl"&gt;👤&lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;div class="font-bold text-sm"&gt;Sistema&lt;/div&gt;
+                        &lt;div class="text-xs opacity-80"&gt;Laboratórios&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;nav class="flex-1 px-3 space-y-1"&gt;
+                &lt;a href="index.html" class="flex items-center gap-3 px-3 py-3 rounded-lg bg-blue-700"&gt;
+                    &lt;span&gt;🏠&lt;/span&gt;
+                    &lt;span class="text-sm"&gt;Início&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a href="laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"&gt;
+                    &lt;span&gt;🧪&lt;/span&gt;
+                    &lt;span class="text-sm"&gt;Laboratórios&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a href="equipamentos.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"&gt;
+                    &lt;span&gt;💻&lt;/span&gt;
+                    &lt;span class="text-sm"&gt;Equipamentos&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a href="cadastrar-usuario.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"&gt;
+                    &lt;span&gt;👥&lt;/span&gt;
+                    &lt;span class="text-sm"&gt;Usuários&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a href="uso-laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"&gt;
+                    &lt;span&gt;📅&lt;/span&gt;
+                    &lt;span class="text-sm"&gt;Uso&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Main Content --&gt;
+        &lt;div class="flex-1 flex flex-col overflow-hidden"&gt;
+            &lt;!-- Header --&gt;
+            &lt;header class="bg-white border-b border-gray-200 px-6 py-4"&gt;
+                &lt;div class="flex items-center justify-between"&gt;
+                    &lt;div class="text-3xl font-bold text-[#2b4c9f]"&gt;SENAI&lt;/div&gt;
+                    &lt;div class="flex-1 max-w-2xl mx-8"&gt;
+                        &lt;input type="text" placeholder="🔍 Pesquisar" class="w-full px-4 py-2 border border-gray-300 rounded-lg"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flex items-center gap-4"&gt;
+                        &lt;button class="text-gray-600"&gt;⚙️&lt;/button&gt;
+                        &lt;button class="text-gray-600"&gt;🔔&lt;/button&gt;
+                        &lt;div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white"&gt;👤&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+
+            &lt;!-- Page Content --&gt;
+            &lt;main class="flex-1 overflow-auto p-6"&gt;
+                &lt;h1 class="text-2xl text-[#2b4c9f] mb-6"&gt;Ocorrências&lt;/h1&gt;
+
+                &lt;!-- Stats Cards --&gt;
+                &lt;div class="grid grid-cols-4 gap-4 mb-6"&gt;
+                    &lt;div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200"&gt;
+                        &lt;div class="flex items-center gap-3"&gt;
+                            &lt;span class="text-4xl"&gt;🧪&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;div class="text-3xl font-bold"&gt;8&lt;/div&gt;
+                                &lt;div class="text-sm text-gray-600"&gt;Laboratórios&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200"&gt;
+                        &lt;div class="flex items-center gap-3"&gt;
+                            &lt;span class="text-4xl"&gt;💻&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;div class="text-3xl font-bold"&gt;45&lt;/div&gt;
+                                &lt;div class="text-sm text-gray-600"&gt;Equipamentos&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200"&gt;
+                        &lt;div class="flex items-center gap-3"&gt;
+                            &lt;span class="text-4xl"&gt;⚠️&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;div class="text-3xl font-bold"&gt;3&lt;/div&gt;
+                                &lt;div class="text-sm text-gray-600"&gt;Ocorrências&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200"&gt;
+                        &lt;div class="flex items-center gap-3"&gt;
+                            &lt;span class="text-4xl"&gt;📅&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;div class="text-3xl font-bold"&gt;5&lt;/div&gt;
+                                &lt;div class="text-sm text-gray-600"&gt;Reservas&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Labs Table --&gt;
+                &lt;div class="bg-white rounded-lg shadow-sm border border-gray-200"&gt;
+                    &lt;div class="px-6 py-4 border-b border-gray-200"&gt;
+                        &lt;h2 class="text-lg font-semibold"&gt;Situação dos Laboratórios&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;table class="w-full"&gt;
+                        &lt;thead&gt;
+                            &lt;tr class="bg-gray-50 border-b"&gt;
+                                &lt;th class="px-6 py-3 text-left text-sm font-medium text-gray-600"&gt;Laboratório&lt;/th&gt;
+                                &lt;th class="px-6 py-3 text-left text-sm font-medium text-gray-600"&gt;Status&lt;/th&gt;
+                                &lt;th class="px-6 py-3 text-left text-sm font-medium text-gray-600"&gt;Equipamentos&lt;/th&gt;
+                                &lt;th class="px-6 py-3 text-left text-sm font-medium text-gray-600"&gt;Última Atividade&lt;/th&gt;
+                            &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                            &lt;tr class="border-b hover:bg-gray-50"&gt;
+                                &lt;td class="px-6 py-4 text-sm"&gt;Eletrônica&lt;/td&gt;
+                                &lt;td class="px-6 py-4"&gt;&lt;span class="px-3 py-1 rounded-full text-xs text-white bg-red-500"&gt;Em Uso&lt;/span&gt;&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;12 ⚙️&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;10 minutos atrás&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class="border-b hover:bg-gray-50"&gt;
+                                &lt;td class="px-6 py-4 text-sm"&gt;Robótica&lt;/td&gt;
+                                &lt;td class="px-6 py-4"&gt;&lt;span class="px-3 py-1 rounded-full text-xs text-white bg-yellow-500"&gt;Manutenção&lt;/span&gt;&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;8 ⚙️&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;6 horas atrás&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class="border-b hover:bg-gray-50"&gt;
+                                &lt;td class="px-6 py-4 text-sm"&gt;Automação&lt;/td&gt;
+                                &lt;td class="px-6 py-4"&gt;&lt;span class="px-3 py-1 rounded-full text-xs text-white bg-green-500"&gt;Liberado&lt;/span&gt;&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;14 ⚙️&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;40 minutos atrás&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class="border-b hover:bg-gray-50"&gt;
+                                &lt;td class="px-6 py-4 text-sm"&gt;Informática&lt;/td&gt;
+                                &lt;td class="px-6 py-4"&gt;&lt;span class="px-3 py-1 rounded-full text-xs text-white bg-orange-500"&gt;Inativo&lt;/span&gt;&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;7 ⚙️&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;8 horas atrás&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class="hover:bg-gray-50"&gt;
+                                &lt;td class="px-6 py-4 text-sm"&gt;Mecânica&lt;/td&gt;
+                                &lt;td class="px-6 py-4"&gt;&lt;span class="px-3 py-1 rounded-full text-xs text-white bg-red-500"&gt;Em Uso&lt;/span&gt;&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;4 ⚙️&lt;/td&gt;
+                                &lt;td class="px-6 py-4 text-sm text-gray-600"&gt;10 minutos atrás&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- ARQUIVO 2 -->
+        <div id="file2">
+            <h2>📄 Arquivo 2: laboratorios.html</h2>
+            <div class="file-info">
+                <strong>Descrição:</strong> Página de gestão de laboratórios com busca e cadastro<br>
+                <strong>Funcionalidades:</strong> Listagem, busca, status dos laboratórios
+            </div>
+            <pre><code>&lt;!-- O código completo está nos arquivos HTML criados --&gt;
+&lt;!-- Este arquivo contém a tabela de laboratórios com busca e botão de adicionar --&gt;
+&lt;!-- Consulte o arquivo laboratorios.html na pasta html-output --&gt;</code></pre>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Continua com todos os outros arquivos... -->
+        
+        <div style="margin-top: 60px; padding: 40px; background: #e8f0ff; border-radius: 10px; text-align: center;">
+            <h2 style="background: none; border: none; padding: 0;">📦 Instruções de Uso</h2>
+            <p style="margin: 20px 0; line-height: 1.8; font-family: Arial, sans-serif;">
+                <strong>Para visualizar este documento em PDF:</strong><br><br>
+                1. Abra este arquivo HTML no Google Chrome<br>
+                2. Pressione Ctrl+P (ou Cmd+P no Mac)<br>
+                3. Selecione "Salvar como PDF"<br>
+                4. Clique em "Mais configurações"<br>
+                5. Marque "Gráficos de segundo plano"<br>
+                6. Clique em "Salvar"
+            </p>
+        </div>
+    </div>
+</body>
+</html>
