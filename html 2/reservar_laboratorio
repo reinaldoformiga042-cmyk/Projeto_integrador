@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI - Reservar Laboratório</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <div class="bg-[#2b4c9f] text-white w-64 flex flex-col">
+            <div class="p-4"><div class="flex items-center gap-2 mb-6"><div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-xl">👤</div><div><div class="font-bold text-sm">Sistema</div><div class="text-xs opacity-80">Laboratórios</div></div></div></div>
+            <nav class="flex-1 px-3 space-y-1">
+                <a href="index.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>🏠</span><span class="text-sm">Início</span></a>
+                <a href="laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>🧪</span><span class="text-sm">Laboratórios</span></a>
+                <a href="equipamentos.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>💻</span><span class="text-sm">Equipamentos</span></a>
+                <a href="cadastrar-usuario.html" class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-blue-700"><span>👥</span><span class="text-sm">Usuários</span></a>
+                <a href="uso-laboratorios.html" class="flex items-center gap-3 px-3 py-3 rounded-lg bg-blue-700"><span>📅</span><span class="text-sm">Uso</span></a>
+            </nav>
+        </div>
+
+        <div class="flex-1 flex flex-col">
+            <header class="bg-white border-b px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="text-3xl font-bold text-[#2b4c9f]">SENAI</div>
+                    <div class="flex-1 max-w-2xl mx-8"><input type="text" placeholder="🔍 Pesquisar" class="w-full px-4 py-2 border rounded-lg"></div>
+                    <div class="flex items-center gap-4"><button>⚙️</button><button>🔔</button><div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white">👤</div></div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-auto p-6">
+                <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-sm border p-8">
+                    <h1 class="text-2xl text-[#2b4c9f] mb-6">Reservar Laboratório</h1>
+
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-[#2b4c9f] mb-2">Laboratório</label>
+                            <select class="w-full px-4 py-2 border rounded-lg">
+                                <option>📋 Informática</option>
+                                <option>Eletrônica</option>
+                                <option>Robótica</option>
+                                <option>Automação</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-[#2b4c9f] mb-2">Curso</label>
+                            <select class="w-full px-4 py-2 border rounded-lg">
+                                <option>Robótica</option>
+                                <option>Eletrônica</option>
+                                <option>Informática</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-[#2b4c9f] mb-2">Data</label>
+                                <input type="date" value="2026-04-24" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-[#2b4c9f] mb-2">Horário</label>
+                                <select class="w-full px-4 py-2 border rounded-lg">
+                                    <option>14:30 - 16:30</option>
+                                    <option>08:00 - 10:00</option>
+                                    <option>10:00 - 12:00</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-[#2b4c9f] mb-2">Motivo da Reserva</label>
+                            <textarea placeholder="ex.: Aula prática para desenvolvimento e teste de software" rows="4" class="w-full px-4 py-2 border rounded-lg resize-none"></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-[#2b4c9f] mb-3">Detalhes da Reserva</label>
+                            <div class="bg-gray-50 rounded-lg p-4 space-y-3">
+                                <div class="flex items-center gap-3"><span>🧪</span><span class="text-sm">Informática</span></div>
+                                <div class="flex items-center gap-3"><span>🕐</span><span class="text-sm">14:30 - 16:30</span></div>
+                                <div class="flex items-center gap-3"><span>📅</span><span class="text-sm">24/04/2026</span></div>
+                                <div class="flex items-center gap-3"><span>🧪</span><span class="text-sm">Robótica</span></div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end gap-3 pt-6">
+                            <a href="uso-laboratorios.html" class="px-6 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Cancelar</a>
+                            <button type="submit" class="px-6 py-2 bg-[#2b4c9f] text-white rounded-lg">Confirmar Reserva</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
